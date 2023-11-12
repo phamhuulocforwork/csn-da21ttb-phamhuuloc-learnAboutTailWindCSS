@@ -6,7 +6,7 @@
 - Xây dựng đề cương chi tiết. `Hoàn thành ✅`
 - Tạo dự án trên GitHub và mời GVHD làm cộng tác. `Hoàn thành ✅`
 - Khó khăn và vướng mắc: không.
-- Báo cáo tiến độ với GVHD.`GVHD: Đã duyệt. --> Cố gắng hoàn thành công việc nghiên cứu tài liệu để chuẩn bị tốt cho dự án`
+- Báo cáo tiến độ với GVHD.`GVHD: Đã duyệt`
 
 ## Tuần 2: Từ 20/11/2023 đến 26/11/2023
 
