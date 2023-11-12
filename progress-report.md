@@ -2,7 +2,7 @@
 
 ## Tuần 1: Từ 06/11/2023 đến 12/11/2023
 
-- Nghiên cứu cơ bản về Tailwind CSS framework.
+- Nghiên cứu cơ bản về Tailwind CSS framework.`Hoàn thành ✅`
 - Xây dựng đề cương chi tiết. `Hoàn thành ✅`
 - Tạo dự án trên GitHub và mời GVHD làm cộng tác. `Hoàn thành ✅`
 - Báo cáo tiến độ với GVHD.`GVHD: Đã duyệt. --> Cố gắng hoàn thành công việc nghiên cứu tài liệu để chuẩn bị tốt cho dự án`
