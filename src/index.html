@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-background-pattern">
+    <div class="container flex">
+      <!-- sidebar -->
+      <div class="h-auto bg-white md:w-56">
+        <div class="flexCenter p-6">
+          <img src="/public/logo.svg" alt="logo" />
+        </div>
+        <div class="hidden h-full md:flex w-56 flex-col z-30">
+          <div class="border-r flex flex-col overflow-auto bg-white shadow">
+            <div class="sidebarItem flex flex-col w-full"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container bg-white border-b shadow-sm inset-y-0">
+        <!-- Header -->
+        <nav class="flexBetween z-30 py-5 px-5">
+          <div class="hidden lg:flexCenter gap-4">
+            <button type="button" class="btn btn_indigo">Sign in</button>
+            <button type="button" class="btn btn_indigo">Sign up</button>
+          </div>
+        </nav>
+        <!-- Main content -->
+        <main class="main"></main>
+      </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
