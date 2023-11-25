@@ -10,9 +10,10 @@
 
 ## Tuần 2: Từ 20/11/2023 đến 26/11/2023
 
-- Thiết kế giao diện cho ứng dụng web, bao gồm layout chung và thanh điều hướng.
-- Xây dựng chức năng hiển thị danh sách các khóa học và các tính năng liên quan.
-- Chạy demo.
+- Thiết kế giao diện cho ứng dụng web, bao gồm layout chung và thanh điều hướng. `Hoàn thành ✅`
+- Xây dựng chức năng hiển thị danh sách các khóa học và các tính năng liên quan. `Hoàn thành ✅`
+- Chạy demo. `Hoàn thành ✅`
+- Khó khăn và vướng mắc: không.
 - Báo cáo tiến độ với GVHD.
 
 ## Tuần 3: Từ 04/12/2023 đến 10/12/2023

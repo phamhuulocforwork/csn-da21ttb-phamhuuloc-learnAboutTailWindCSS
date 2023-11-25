@@ -5,10 +5,10 @@ const sidebarLoader = () => {
     const sidebar = document.querySelector('.sidebar')
     if (sidebar) {
       sidebar.innerHTML = `
-        <div class="p-5 flex">
+        <div class="p-5 flexCenter">
         <img src="./public/logo.svg" alt="logo" />
         </div>
-        <hr class="my-2 text-gray-600" />
+        <hr class=" text-gray-600" />
         <div class="h-full flex w-56 flex-col z-30">
           <div class="flex flex-col overflow-auto bg-white">
             <div class="sidebarItem flex flex-col w-full"></div>
