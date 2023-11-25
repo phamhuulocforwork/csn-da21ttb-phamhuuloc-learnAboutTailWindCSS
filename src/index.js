@@ -1,4 +1,3 @@
-import sidebarApi from './js/sidebarApi.js'
 /*
 TODO: 
 - Tạo API giả cho sidebar item. DONE ✅
@@ -7,31 +6,24 @@ TODO:
 - Hiện thị số người tham gia khoá học.
 - Mũi tên về đầu trang, cuối trang .
 - Sửa logo.
-- Sửa lại sidebar và responsive cho mobile.
+- Sửa lại sidebar và responsive cho mobile. DONE ✅
 */
-const getSidebar = async () => {
-  try {
-    const sidebarData = await sidebarApi.getAll()
-    sidebarData.forEach((data) => {
-      const sidebar = document.querySelector('.sidebarItem')
-      if (sidebar) {
-        sidebar.innerHTML += `
-          <a href="${data.path}" onclick="route()" class="btn_sidebar">
-            <div class="flexCenter gap-x-2 py-4">
-              ${data.icon}
-            </div>
-            ${data.title}
-          </a>
-        `
-      }
-    })
-  } catch (error) {
-    console.log('Fail to get sidebar: ', error)
+import sidebar from './components/SIDEBAR/js/sidebar.js'
+
+//sidebar
+sidebar.sidebarLoader()
+const barButton = document.querySelector('.barButton')
+const sidebarToggle = () => {
+  barButton.onclick = () => {
+    const sidebar = document.querySelector('.sidebar')
+    const main = document.querySelector('.main')
+    if (!sidebar.classList.contains('hidden')) {
+      sidebar.classList.add('hidden')
+      // main.classList.remove('hidden')
+    } else {
+      sidebar.classList.remove('hidden')
+      // main.classList.add('hidden')
+    }
   }
 }
-
-const main = () => {
-  getSidebar()
-}
-
-main()
+barButton.addEventListener('click', sidebarToggle())

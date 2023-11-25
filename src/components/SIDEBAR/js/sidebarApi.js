@@ -1,4 +1,4 @@
-import { SIDEBAR_LIST } from './fake-api.js'
+import { SIDEBAR_LIST } from '../../../js/fake-api.js'
 
 const getAll = () => {
   return new Promise((resolve) => {

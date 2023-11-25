@@ -568,8 +568,8 @@ video {
   }
 }
 
-.static {
-  position: static;
+.absolute {
+  position: absolute;
 }
 
 .relative {
@@ -589,8 +589,17 @@ video {
   margin: 0.5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.ml-28 {
+  margin-left: 7rem;
 }
 
 .block {
@@ -637,6 +646,10 @@ video {
   flex: 1 1 0%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -666,6 +679,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -674,13 +691,14 @@ video {
   border-right-width: 1px;
 }
 
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-background-pattern {
-  background-image: url('/public/background.svg');
 }
 
 .bg-clip-border {
@@ -691,23 +709,17 @@ video {
   padding: 1rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .pt-0 {
@@ -746,6 +758,11 @@ video {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -839,18 +856,6 @@ video {
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
-/* .section {
-    @apply mt-4;
-  } */
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  /* padding: 0 1rem; */
-  /* border: 1px solid red; */
-}
-
 .flexCenter {
   display: flex;
   align-items: center;
@@ -871,6 +876,20 @@ video {
 
 body {
   font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boxShadow {
+  box-shadow: 5.1px 3.3px 2.5px rgba(0, 0, 0, 0.032),
+    12.9px 8.3px 6.8px rgba(0, 0, 0, 0.049),
+    25.9px 16.7px 14.3px rgba(0, 0, 0, 0.06),
+    50.4px 32.5px 29.8px rgba(0, 0, 0, 0.067),
+    121px 78px 79px rgba(0, 0, 0, 0.07);
 }
 
 /* xs */
@@ -947,12 +966,24 @@ button {
     display: flex;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-56 {
     width: 14rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:flexCenter {
     display: flex;
     align-items: center;

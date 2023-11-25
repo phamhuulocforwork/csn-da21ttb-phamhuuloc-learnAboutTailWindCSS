@@ -5,29 +5,308 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-background-pattern">
+  <body class="bg-blue-200">
     <div class="container flex">
       <!-- sidebar -->
-      <div class="h-auto bg-white md:w-56">
-        <div class="flexCenter p-6">
-          <img src="/public/logo.svg" alt="logo" />
-        </div>
-        <div class="hidden h-full md:flex w-56 flex-col z-30">
-          <div class="border-r flex flex-col overflow-auto bg-white shadow">
-            <div class="sidebarItem flex flex-col w-full"></div>
+      <div class="sidebar hidden md:flex flex-col h-auto bg-white border"></div>
+      <div class="container bg-white border-b inset-y-0">
+        <!-- navbar -->
+        <nav class="bg-white flexBetween z-30 p-4 shadow-sm">
+          <!-- mobile sidebar -->
+          <div class="barButton md:hidden block cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
           </div>
-        </div>
-      </div>
-      <div class="container bg-white border-b shadow-sm inset-y-0">
-        <!-- Header -->
-        <nav class="flexBetween z-30 py-5 px-5">
+          <!-- button -->
           <div class="hidden lg:flexCenter gap-4">
             <button type="button" class="btn btn_indigo">Sign in</button>
             <button type="button" class="btn btn_indigo">Sign up</button>
           </div>
         </nav>
-        <!-- Main content -->
-        <main class="main"></main>
+        <!-- main content -->
+        <main class="main p-6">
+          <div
+            class="bg-white flex-1 grid sm:gird-cols-2 lg:gird-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6"
+          >
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+            >
+              <div class="m-2 rounded-md overflow-hidden">
+                <img
+                  src="https://picsum.photos/350/200"
+                  alt=""
+                  class="w-full"
+                />
+              </div>
+              <div class="p-4">
+                <h5
+                  class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                >
+                  Card title
+                </h5>
+                <p
+                  class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                >
+                  Et est incididunt ad in dolore in.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+            <!-- card -->
+          </div>
+        </main>
       </div>
     </div>
     <script src="./index.js" type="module"></script>

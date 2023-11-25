@@ -31,18 +31,6 @@ body {
     @apply bg-rose-500 px-6 py-2 text-white transition-all hover:bg-rose-600;
   }
 
-  /* .section {
-    @apply mt-4;
-  } */
-
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    /* padding: 0 1rem; */
-    /* border: 1px solid red; */
-  }
-
   .flexCenter {
     @apply flex items-center justify-center;
   }
@@ -58,6 +46,20 @@ body {
   .flexEnd {
     @apply flex items-center justify-end;
   }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boxShadow {
+  box-shadow: 5.1px 3.3px 2.5px rgba(0, 0, 0, 0.032),
+    12.9px 8.3px 6.8px rgba(0, 0, 0, 0.049),
+    25.9px 16.7px 14.3px rgba(0, 0, 0, 0.06),
+    50.4px 32.5px 29.8px rgba(0, 0, 0, 0.067),
+    121px 78px 79px rgba(0, 0, 0, 0.07);
 }
 
 /* xs */
