@@ -6,7 +6,7 @@ const sidebarLoader = () => {
     if (sidebar) {
       sidebar.innerHTML = `
         <div class="p-5 flex">
-        <img src="/public/logo.svg" alt="logo" />
+        <img src="./public/logo.svg" alt="logo" />
         </div>
         <hr class="my-2 text-gray-600" />
         <div class="h-full flex w-56 flex-col z-30">
