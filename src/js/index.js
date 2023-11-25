@@ -8,7 +8,7 @@ TODO:
 - Sửa logo.
 - Sửa lại sidebar và responsive cho mobile. DONE ✅
 */
-import sidebar from './components/SIDEBAR/js/sidebar.js'
+import sidebar from '../components/SIDEBAR/js/sidebar.js'
 
 //sidebar
 sidebar.sidebarLoader()
