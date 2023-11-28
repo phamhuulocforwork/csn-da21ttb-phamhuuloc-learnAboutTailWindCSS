@@ -580,10 +580,6 @@ video {
   position: relative;
 }
 
-.inset-0 {
-  inset: 0px;
-}
-
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -708,17 +704,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
-}
-
 .bg-clip-border {
   background-clip: border-box;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .p-4 {
@@ -731,6 +718,10 @@ video {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .py-4 {
@@ -793,10 +784,6 @@ video {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.opacity-30 {
-  opacity: 0.3;
 }
 
 .shadow {
@@ -976,18 +963,6 @@ button {
 @media (min-width: 768px) {
   .md\:static {
     position: static;
-  }
-
-  .md\:fixed {
-    position: fixed;
-  }
-
-  .md\:absolute {
-    position: absolute;
-  }
-
-  .md\:relative {
-    position: relative;
   }
 
   .md\:block {

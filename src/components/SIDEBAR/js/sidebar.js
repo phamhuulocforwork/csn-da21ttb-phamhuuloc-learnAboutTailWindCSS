@@ -5,6 +5,22 @@ const sidebarLoader = () => {
     const sidebar = document.querySelector('.sidebar')
     if (sidebar) {
       sidebar.innerHTML = `
+      <div class="x-btn block md:hidden absolute p-2 right-0 cursor-pointer">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </div>
         <div class="p-5 flexCenter">
         <img src="./public/logo.svg" alt="logo" />
         </div>
