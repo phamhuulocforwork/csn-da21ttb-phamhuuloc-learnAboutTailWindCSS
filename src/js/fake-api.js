@@ -34,3 +34,15 @@ export const SIDEBAR_LIST = [
     isActive: false,
   },
 ]
+//card
+export const CARD_LIST = [
+  {
+    _id: 0,
+    title: 'Card title',
+    url_thumbnail: 'https://picsum.photos/350/200',
+    short_description: 'Et est incididunt ad in dolore in.',
+    description: 'Et est incididunt ad in dolore in.',
+    process_bar: 90,
+    rate: 3,
+  },
+]
