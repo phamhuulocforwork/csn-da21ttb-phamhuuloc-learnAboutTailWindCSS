@@ -568,10 +568,6 @@ video {
   }
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
@@ -589,17 +585,8 @@ video {
   margin: 0.5rem;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.ml-28 {
-  margin-left: 7rem;
 }
 
 .block {
@@ -654,8 +641,20 @@ video {
   flex-direction: column;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-x-2 {
@@ -691,9 +690,9 @@ video {
   border-right-width: 1px;
 }
 
-.bg-blue-200 {
+.bg-red-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -884,14 +883,6 @@ body {
   margin-right: auto;
 }
 
-.boxShadow {
-  box-shadow: 5.1px 3.3px 2.5px rgba(0, 0, 0, 0.032),
-    12.9px 8.3px 6.8px rgba(0, 0, 0, 0.049),
-    25.9px 16.7px 14.3px rgba(0, 0, 0, 0.06),
-    50.4px 32.5px 29.8px rgba(0, 0, 0, 0.067),
-    121px 78px 79px rgba(0, 0, 0, 0.07);
-}
-
 /* xs */
 
 @media (min-width: 475px) {
@@ -961,7 +952,21 @@ button {
   color: inherit;
 }
 
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -973,18 +978,8 @@ button {
   .md\:w-56 {
     width: 14rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
-  .lg\:flexCenter {
+  .md\:flexCenter {
     display: flex;
     align-items: center;
     justify-content: center;
