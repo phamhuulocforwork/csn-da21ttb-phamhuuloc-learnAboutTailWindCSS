@@ -5,42 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-red-400">
-    <div class="container flex">
-      <!-- sidebar -->
-      <div
-        class="sidebar hidden md:flex fixed md:static flex-col bg-white border z-30 md:h-auto h-full"
-      ></div>
-      
-      <div class="container bg-white border-b inset-y-0">
-        <!-- navbar -->
-        <nav class="bg-white flexBetween z-30 p-4 shadow-sm">
-          <!-- mobile sidebar -->
-          <div class="barButton block md:hidden cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
-          <!-- button -->
-          <div class="hidden md:flexCenter gap-4">
-            <button type="button" class="btn btn_indigo">Sign in</button>
-            <button type="button" class="btn btn_indigo">Sign up</button>
-          </div>
-        </nav>
-        <!-- main content -->
-        <main class="main p-6"></main>
+  <body class="bg-background-pattern">
+    <div class="container bg-white">
+      <div class="container flex">
+        <!-- sidebar -->
+        <div
+          class="sidebar hidden md:flex fixed md:static flex-col bg-white border z-30 md:h-auto h-full"
+        ></div>
+        <div class="bg-white border-b inset-y-0">
+          <!-- navbar -->
+          <header class="bg-white flexBetween z-30 p-4 shadow-sm">
+            <!-- mobile sidebar -->
+            <div class="barButton block md:hidden cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+            <!-- button -->
+            <div class="hidden md:flexCenter gap-4">
+              <button type="button" class="btn btn_indigo">Sign in</button>
+              <button type="button" class="btn btn_indigo">Sign up</button>
+            </div>
+          </header>
+          <!-- main content -->
+          <main class="main p-6"></main>
+        </div>
       </div>
+      <footer
+        class="container p-4 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between"
+      >
+        <p
+          class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased"
+        >
+          © 2023 Material Tailwind
+        </p>
+        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
+          <li>
+            <a
+              href="#"
+              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+            >
+              License
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+            >
+              Contribute
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
     <script src="./src/js/index.js" type="module"></script>
   </body>
