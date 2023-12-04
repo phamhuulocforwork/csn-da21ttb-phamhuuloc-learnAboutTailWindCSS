@@ -14,7 +14,7 @@
 - Xây dựng chức năng hiển thị danh sách các khóa học và các tính năng liên quan. `Hoàn thành ✅`
 - Chạy demo. `Hoàn thành ✅`
 - Khó khăn và vướng mắc: không.
-- Báo cáo tiến độ với GVHD.
+- Báo cáo tiến độ với GVHD. `GVHD: đã duyệt`
 
 ## Tuần 3: Từ 04/12/2023 đến 10/12/2023
 
