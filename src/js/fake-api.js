@@ -40,9 +40,19 @@ export const CARD_LIST = [
     _id: 0,
     title: 'Card title',
     url_thumbnail: 'https://picsum.photos/350/200',
+    image: [
+      {
+        _id: 0,
+        width: 350,
+        height: 200,
+        url: 'https://picsum.photos/350/200',
+        type: 'image/png',
+      },
+    ],
     short_description: 'Et est incididunt ad in dolore in.',
     description: 'Et est incididunt ad in dolore in.',
     process_bar: 90,
-    rate: 3,
+    star: 4.4,
+    review: 15,
   },
 ]

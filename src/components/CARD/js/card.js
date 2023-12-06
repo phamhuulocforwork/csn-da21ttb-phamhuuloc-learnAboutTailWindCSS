@@ -28,7 +28,7 @@ const getCardItem = async () => {
           >
             <div class="m-2 rounded-md overflow-hidden">
               <img
-                src="${data.url_thumbnail}"
+                src="${data.image[0].url}"
                 alt=""
                 class="w-full"
               />

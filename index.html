@@ -17,20 +17,8 @@
           <header class="bg-white flexBetween z-30 p-4 shadow-sm">
             <!-- mobile sidebar -->
             <div class="barButton block md:hidden cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
               </svg>
+              <img src="./assets/icons/bars.svg" class="w-6" />
             </div>
             <!-- button -->
             <div class="hidden md:flexCenter gap-4">
@@ -39,7 +27,62 @@
             </div>
           </header>
           <!-- main content -->
-          <main class="main p-6"></main>
+          <main class="main p-6">
+            <div
+              class="cardContainer bg-white flex-1 grid sm:gird-cols-2 lg:gird-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6"
+            >
+              <div
+                class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+              >
+                <div class="m-2 rounded-md overflow-hidden">
+                  <div class="absolute m-2">
+                    <p
+                      class="backdrop-blur-md bg-white/30 px-3 py-2 rounded-md text-base font-semibold text-black tracking-wider"
+                    >
+                      HTML
+                    </p>
+                  </div>
+                  <img
+                    src="https://picsum.photos/350/200"
+                    alt=""
+                    class="w-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h5
+                    class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                  >
+                    Card title
+                  </h5>
+                  <p
+                    class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                  >
+                    description
+                  </p>
+                  <div class="w-full flexStart mt-1">
+                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
+                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
+                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
+                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
+                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
+                    <span class="text-base ml-2 text-gray-500">(20)</span>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 flexBetween">
+                  <div>
+                    <p class="font-semibold text-xl">$ 300</p>
+                  </div>
+                  <button
+                    class="btn btn_indigo"
+                    type="button"
+                    data-ripple-light="true"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
       </div>
       <footer
