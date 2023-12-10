@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -10,18 +10,50 @@
       <div class="container flex">
         <!-- sidebar -->
         <div
-          class="sidebar hidden md:flex fixed md:static flex-col bg-white border z-30 md:h-auto h-full"
+          class="sidebar fixed z-30 hidden h-full flex-col border bg-white md:static md:flex md:h-auto"
         ></div>
-        <div class="bg-white border-b inset-y-0">
+        <div class="inset-y-0 border-b bg-white">
           <!-- navbar -->
-          <header class="bg-white flexBetween z-30 p-4 shadow-sm">
+          <header class="flexBetween z-30 gap-4 bg-white p-4 shadow-sm">
             <!-- mobile sidebar -->
-            <div class="barButton block md:hidden cursor-pointer">
-              </svg>
+            <div class="barButton block cursor-pointer md:hidden">
               <img src="./assets/icons/bars.svg" class="w-6" />
             </div>
+            <form class="flex items-center">
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <input
+                  type="text"
+                  id="simple-search"
+                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
+                  placeholder="Search branch name..."
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="ms-2 rounded-lg border border-indigo-700 bg-indigo-700 p-2.5 text-sm font-medium text-white hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              >
+                <svg
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
             <!-- button -->
-            <div class="hidden md:flexCenter gap-4">
+            <div class="md:flexCenter hidden gap-4">
               <button type="button" class="btn btn_indigo">Sign in</button>
               <button type="button" class="btn btn_indigo">Sign up</button>
             </div>
@@ -29,15 +61,16 @@
           <!-- main content -->
           <main class="main p-6">
             <div
-              class="cardContainer bg-white flex-1 grid sm:gird-cols-2 lg:gird-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6"
+              class="cardContainer sm:gird-cols-2 lg:gird-cols-3 grid flex-1 gap-4 bg-white xl:grid-cols-4 2xl:grid-cols-4"
             >
+              <!-- card -->
               <div
                 class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
               >
-                <div class="m-2 rounded-md overflow-hidden">
+                <div class="m-2 overflow-hidden rounded-md">
                   <div class="absolute m-2">
                     <p
-                      class="backdrop-blur-md bg-white/30 px-3 py-2 rounded-md text-base font-semibold text-black tracking-wider"
+                      class="rounded-md bg-white/30 px-3 py-2 text-base font-semibold tracking-wider text-black backdrop-blur-md"
                     >
                       HTML
                     </p>
@@ -50,7 +83,7 @@
                 </div>
                 <div class="p-4">
                   <h5
-                    class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+                    class="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased"
                   >
                     Card title
                   </h5>
@@ -59,18 +92,69 @@
                   >
                     description
                   </p>
-                  <div class="w-full flexStart mt-1">
-                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
-                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
-                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
-                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
-                    <img class="w-4 mr-1" src="./assets/icons/star.svg" />
-                    <span class="text-base ml-2 text-gray-500">(20)</span>
+                  <div class="flexStart mt-1 w-full">
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <span class="ml-2 text-base text-gray-500">(20)</span>
                   </div>
                 </div>
-                <div class="p-6 pt-0 flexBetween">
+                <div class="flexBetween p-6 pt-0">
                   <div>
-                    <p class="font-semibold text-xl">$ 300</p>
+                    <p class="text-xl font-semibold">$ 300</p>
+                  </div>
+                  <button
+                    class="btn btn_indigo"
+                    type="button"
+                    data-ripple-light="true"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+              <!-- card -->
+              <div
+                class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+              >
+                <div class="m-2 overflow-hidden rounded-md">
+                  <div class="absolute m-2">
+                    <p
+                      class="rounded-md bg-white/30 px-3 py-2 text-base font-semibold tracking-wider text-black backdrop-blur-md"
+                    >
+                      HTML
+                    </p>
+                  </div>
+                  <img
+                    src="https://picsum.photos/350/200"
+                    alt=""
+                    class="w-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h5
+                    class="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased"
+                  >
+                    Card title
+                  </h5>
+                  <p
+                    class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                  >
+                    description
+                  </p>
+                  <div class="flexStart mt-1 w-full">
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
+                    <span class="ml-2 text-base text-gray-500">(20)</span>
+                  </div>
+                </div>
+                <div class="flexBetween p-6 pt-0">
+                  <div>
+                    <p class="text-xl font-semibold">$ 300</p>
                   </div>
                   <button
                     class="btn btn_indigo"
@@ -86,18 +170,18 @@
         </div>
       </div>
       <footer
-        class="container p-4 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between"
+        class="border-blue-gray-50 container flex w-full flex-row flex-wrap items-center justify-center gap-x-12 gap-y-6 border-t p-4 py-6 text-center md:justify-between"
       >
         <p
-          class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased"
+          class="text-blue-gray-900 block font-sans text-base font-normal leading-relaxed antialiased"
         >
           © 2023 Material Tailwind
         </p>
-        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
+        <ul class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <li>
             <a
               href="#"
-              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+              class="text-blue-gray-900 block font-sans text-base font-normal leading-relaxed antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
             >
               About Us
             </a>
@@ -105,7 +189,7 @@
           <li>
             <a
               href="#"
-              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+              class="text-blue-gray-900 block font-sans text-base font-normal leading-relaxed antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
             >
               License
             </a>
@@ -113,7 +197,7 @@
           <li>
             <a
               href="#"
-              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+              class="text-blue-gray-900 block font-sans text-base font-normal leading-relaxed antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
             >
               Contribute
             </a>
@@ -121,7 +205,7 @@
           <li>
             <a
               href="#"
-              class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+              class="text-blue-gray-900 block font-sans text-base font-normal leading-relaxed antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
             >
               Contact Us
             </a>
