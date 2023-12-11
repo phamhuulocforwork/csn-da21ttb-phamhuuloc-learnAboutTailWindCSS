@@ -19,7 +19,8 @@
 ## Tuần 3: Từ 04/12/2023 đến 10/12/2023
 
 - Xây dựng chức năng hiển thị danh sách khóa học theo người dùng.
-- Viết báo cáo.
+- Viết báo cáo. `Hoàn thành ✅`
+- Khó khăn và vướng mắc:
 - Báo cáo tiến độ với GVHD.
 
 ## Tuần 4: Từ 18/12/2023 đến 24/12/2023
