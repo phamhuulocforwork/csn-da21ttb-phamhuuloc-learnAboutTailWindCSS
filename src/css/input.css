@@ -4,8 +4,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif;
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+  }
 }
 
 @layer utilities {
@@ -36,10 +46,4 @@ body {
   .flexEnd {
     @apply flex items-center justify-end;
   }
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid red;
 }
