@@ -1,4 +1,5 @@
 import sidebarApi from './sidebarApi.js'
+import { ICON } from '../../../js/fake-api.js'
 
 const sidebarLoader = () => {
   try {
@@ -43,11 +44,17 @@ const getSidebarItem = async () => {
     const sidebarData = await sidebarApi.getAll()
     sidebarData.forEach((data) => {
       const sidebarItem = document.querySelector('.sidebarItem')
+
+      const getIcon = () => {
+        const icon = ICON.find((item) => item.name === data.iconName)
+        return icon ? icon.svg : null
+      }
+
       if (sidebarItem) {
         sidebarItem.innerHTML += `
           <a href="${data.path}" onclick="route()" class="btn_sidebar">
             <div class="flexCenter gap-x-2 py-4">
-              ${data.icon}
+              ${getIcon()}
             </div>
             ${data.title}
           </a>
@@ -59,4 +66,4 @@ const getSidebarItem = async () => {
   }
 }
 
-export default { sidebarLoader, getSidebarItem }
+export default { sidebarLoader }
