@@ -26,14 +26,14 @@ export const SIDEBAR_LIST = [
     _id: 1,
     title: 'Dashboard',
     iconName: 'dashboard',
-    path: '#',
+    path: '/dashboard',
     isActive: false,
   },
   {
     _id: 2,
     title: 'Category',
     iconName: 'category',
-    path: '#',
+    path: '/category',
     isActive: false,
   },
 ]
