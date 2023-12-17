@@ -46,4 +46,16 @@ const deleteUser = (id) => {
   return null
 }
 
-export { getAllUsers, getUserByID, addUser, updateUser, deleteUser }
+const getCurrentUserPermissions = (username) => {
+  const user = USER.find((user) => user.Username === username)
+  return user ? user.Permissions : null
+}
+
+export {
+  getAllUsers,
+  getUserByID,
+  addUser,
+  updateUser,
+  deleteUser,
+  getCurrentUserPermissions,
+}

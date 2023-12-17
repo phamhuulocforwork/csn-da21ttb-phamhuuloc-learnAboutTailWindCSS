@@ -29,6 +29,36 @@ const LESSONS = [
     Description: 'This lesson explains arrays in JavaScript.',
     Category_ID: 2,
   },
+  {
+    _ID: 3,
+    Title: 'Objects in HTML',
+    Tag: 'HTML',
+    Image: {
+      _id: 0,
+      width: 350,
+      height: 200,
+      url: 'https://picsum.photos/350/200',
+      type: 'image/png',
+    },
+    Short_description: 'This lesson learn about HTML.',
+    Description: 'This lesson learn about HTML.',
+    Category_ID: 3,
+  },
+  {
+    _ID: 4,
+    Title: 'Objects in CSS',
+    Tag: 'CSS',
+    Image: {
+      _id: 0,
+      width: 350,
+      height: 200,
+      url: 'https://picsum.photos/350/200',
+      type: 'image/png',
+    },
+    Short_description: 'This lesson learn about CSS.',
+    Description: 'This lesson learn about CSS.',
+    Category_ID: 3,
+  },
 ]
 
 const getAllLessons = () => {

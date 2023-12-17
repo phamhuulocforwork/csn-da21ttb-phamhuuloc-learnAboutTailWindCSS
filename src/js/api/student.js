@@ -3,8 +3,9 @@ const STUDENT = [
     _ID: 1,
     User_ID: 1,
     Student_ID_No: 1001,
-    First_name: 'John',
-    Last_name: 'Doe',
+    First_name: 'admin',
+    Last_name: '',
+    LessonsLearned: [],
   },
   {
     _ID: 2,
@@ -12,6 +13,16 @@ const STUDENT = [
     Student_ID_No: 1002,
     First_name: 'Jane',
     Last_name: 'Smith',
+    LessonsLearned: [
+      {
+        LessonId: 1,
+        Processing: 42,
+      },
+      {
+        LessonId: 2,
+        Processing: 54,
+      },
+    ],
   },
 ]
 
@@ -46,10 +57,16 @@ const deleteStudent = (id) => {
   return null
 }
 
+const getLessonsLearned = (id) => {
+  const student = STUDENT.find((student) => student._ID === id)
+  return student ? student.LessonsLearned : null
+}
+
 export {
   getAllStudents,
   getStudentByID,
   addStudent,
   updateStudent,
   deleteStudent,
+  getLessonsLearned,
 }
