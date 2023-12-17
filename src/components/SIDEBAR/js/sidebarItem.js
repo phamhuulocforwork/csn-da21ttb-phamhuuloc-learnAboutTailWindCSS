@@ -1,20 +1,15 @@
-import sidebarApi from './sidebarApi.js'
-import { ICON } from '../../../js/fake-api.js'
+import { getAllSidebarItems } from '../../../js/api/sidebar.js'
 
 export default async () => {
   try {
     let sidebarItem = ''
-    const sidebarData = await sidebarApi.getAll()
+    const sidebarData = await getAllSidebarItems()
     sidebarData.forEach((data) => {
-      const getIcon = () => {
-        const icon = ICON.find((item) => item.name === data.iconName)
-        return icon ? icon.svg : null
-      }
       if (data) {
         sidebarItem += `
-            <a href="${data.path}" onclick="route()" class="btn_sidebar">
+            <a href="${data.path}" onclick="route()" class="btn_sidebar" data-link>
               <div class="flexCenter gap-x-2 py-4">
-                ${getIcon()}
+                ${data.iconSvg}
               </div>
               ${data.title}
             </a>
