@@ -7,7 +7,7 @@ export default async () => {
     sidebarData.forEach((data) => {
       if (data) {
         sidebarItem += `
-            <a href="${data.path}" onclick="route()" class="btn_sidebar" data-link>
+            <a href="${data.path}" class="btn_sidebar capitalize" data-link>
               <div class="flexCenter gap-x-2 py-4">
                 ${data.iconSvg}
               </div>

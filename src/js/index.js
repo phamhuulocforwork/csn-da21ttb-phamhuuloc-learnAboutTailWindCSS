@@ -1,8 +1,12 @@
+import sidebar from '../components/SIDEBAR/js/sidebar.js'
+const sidebarContent = await sidebar()
+document.querySelector('#sidebar').innerHTML = sidebarContent
+
 import Home from './views/Home.js'
+import Courses from './views/Courses.js'
 import Category from './views/Category.js'
-import Dashboard from './views/Dashboard.js'
-import SignIn from './views/SignIn.js'
-import Lessons from './views/Lessons.js'
+import MyCourses from './views/MyCourses.js'
+import LessonDetail from './views/LessonDetail.js'
 
 const pathToRegex = (path) =>
   new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$')
@@ -26,14 +30,12 @@ const navigateTo = (url) => {
 }
 
 const router = async () => {
-  console.log(pathToRegex('/category/:id'))
   const routes = [
-    { path: '/', querySelector: '#root', view: Home },
-    { path: '/dashboard', querySelector: '#main', view: Dashboard },
-    { path: '/category', querySelector: '#main', view: Category },
-    { path: '/category/:id', querySelector: '#main', view: Category },
-    { path: '/lessons', querySelector: '#main', view: Lessons },
-    { path: '/sign-in', querySelector: '#root', view: SignIn },
+    { path: '/', view: Home },
+    { path: '/courses/:id', view: Courses },
+    { path: '/courses', view: Courses },
+    // { path: '/my-courses/:id', view: MyCourses },
+    { path: '/my-courses', view: MyCourses },
   ]
 
   const potentialMatches = routes.map((route) => {
@@ -54,15 +56,12 @@ const router = async () => {
     }
   }
 
-  document.querySelector('#root').innerHTML = await new Home().getHtml()
-
   const view = new match.route.view(getParams(match))
-  const querySelector = match.route.querySelector
 
-  document.querySelector(querySelector).innerHTML = await view.getHtml()
+  document.querySelector('#main').innerHTML = await view.getHtml()
 }
 
-window.addEventListener('popstate', router)
+window.addEventListener('popstate', () => router())
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.addEventListener('click', (e) => {
@@ -71,6 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateTo(e.target.href)
     }
   })
-
   router()
 })

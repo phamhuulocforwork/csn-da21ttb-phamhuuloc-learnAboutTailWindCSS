@@ -40,13 +40,15 @@ export default async () => {
               <div>
                 <p class="text-xl font-semibold">$ 300</p>
               </div>
-              <button
-                class="btn btn_indigo"
-                type="button"
-                data-ripple-light="true"
-              >
-                Read More
-              </button>
+              <a href="/courses/${data._ID}" data-link>
+                <button
+                  class="btn btn_indigo"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Read More
+                </button>
+              </a>
             </div>
           </div>
           `
