@@ -1,14 +1,6 @@
 const STUDENT = [
   {
     _ID: 1,
-    User_ID: 1,
-    Student_ID_No: 1001,
-    First_name: 'admin',
-    Last_name: '',
-    LessonsLearned: [],
-  },
-  {
-    _ID: 2,
     User_ID: 2,
     Student_ID_No: 1002,
     First_name: 'Jane',

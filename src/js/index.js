@@ -1,12 +1,14 @@
 import sidebar from '../components/SIDEBAR/js/sidebar.js'
+import header from '../components/HEADER/js/header.js'
 const sidebarContent = await sidebar()
+const headerContent = await header()
 document.querySelector('#sidebar').innerHTML = sidebarContent
+document.querySelector('#header').innerHTML = headerContent
 
 import Home from './views/Home.js'
+import SignInPopup from './views/SignInPopup.js'
 import Courses from './views/Courses.js'
-import Category from './views/Category.js'
 import MyCourses from './views/MyCourses.js'
-import LessonDetail from './views/LessonDetail.js'
 
 const pathToRegex = (path) =>
   new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$')
@@ -31,11 +33,10 @@ const navigateTo = (url) => {
 
 const router = async () => {
   const routes = [
-    { path: '/', view: Home },
-    { path: '/courses/:id', view: Courses },
-    { path: '/courses', view: Courses },
-    // { path: '/my-courses/:id', view: MyCourses },
-    { path: '/my-courses', view: MyCourses },
+    { path: '/', querySelector: '#main', view: Home },
+    { path: '/sign-in', querySelector: '#root', view: SignInPopup },
+    { path: '/courses', querySelector: '#main', view: Courses },
+    { path: '/my-courses', querySelector: '#main', view: MyCourses },
   ]
 
   const potentialMatches = routes.map((route) => {
@@ -57,8 +58,9 @@ const router = async () => {
   }
 
   const view = new match.route.view(getParams(match))
+  const querySelector = match.route.querySelector
 
-  document.querySelector('#main').innerHTML = await view.getHtml()
+  document.querySelector(querySelector).innerHTML = await view.getHtml()
 }
 
 window.addEventListener('popstate', () => router())
@@ -70,5 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateTo(e.target.href)
     }
   })
+  const storedUser = JSON.parse(localStorage.getItem('user'))
+  if (storedUser) {
+    const signInBtn = document.getElementById('signInBtn')
+    const signOutBtn = document.getElementById('signOutBtn')
+    signInBtn.classList.remove('md:flexCenter')
+    signOutBtn.classList.add('md:flexCenter')
+  }
   router()
 })

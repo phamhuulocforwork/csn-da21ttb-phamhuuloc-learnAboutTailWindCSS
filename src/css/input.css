@@ -14,7 +14,7 @@
   }
 
   strong {
-    @apply font-semibold text-indigo-700;
+    @apply text-primary-700 font-semibold;
   }
 
   a {
@@ -37,8 +37,8 @@
     @apply flex cursor-pointer items-center gap-x-2 pl-6 text-sm font-semibold text-slate-500 transition-all hover:bg-slate-300/20 hover:text-slate-600;
   }
 
-  .btn_indigo {
-    @apply bg-indigo-700 px-6 py-2 text-white transition-all hover:bg-indigo-800;
+  .btn_primary {
+    @apply hover:bg-primary-800 bg-primary-700 px-6 py-2 text-white transition-all;
   }
 
   .flexCenter {

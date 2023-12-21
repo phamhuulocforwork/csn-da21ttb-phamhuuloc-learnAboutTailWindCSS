@@ -5,6 +5,7 @@ const USER = [
     Password: '123',
     Email: 'admin@gmail.com',
     Permissions: 'admin',
+    LessonsLearned: [],
   },
   {
     _ID: 2,
@@ -12,6 +13,16 @@ const USER = [
     Password: '123',
     Email: 'billpham@gmail.com',
     Permissions: 'student',
+    LessonsLearned: [
+      {
+        LessonId: 1,
+        Processing: 42,
+      },
+      {
+        LessonId: 2,
+        Processing: 54,
+      },
+    ],
   },
 ]
 

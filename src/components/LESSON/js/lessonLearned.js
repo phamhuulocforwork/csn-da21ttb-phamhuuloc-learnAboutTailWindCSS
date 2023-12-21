@@ -1,12 +1,13 @@
 import { getAllLessons } from '../../../js/api/lesson.js'
-import { getLessonsLearned } from '../../../js/api/student.js'
 
-export default async (studentId) => {
+export default async () => {
   try {
     let lessonItem = ''
     const lessonData = await getAllLessons()
-    const studentLessons = getLessonsLearned(studentId)
-    const studentLessonIds = studentLessons.map((lesson) => lesson.LessonId)
+    const student = JSON.parse(localStorage.getItem('user'))
+    const studentLessonIds = student.LessonsLearned.map(
+      (lesson) => lesson.LessonId,
+    )
 
     lessonData.forEach((data) => {
       if (data && studentLessonIds.includes(data._ID)) {
@@ -45,7 +46,7 @@ export default async (studentId) => {
                 <p class="text-xl font-semibold">$ 300</p>
               </div>
               <button
-                class="btn btn_indigo"
+                class="btn btn_primary"
                 type="button"
                 data-ripple-light="true"
               >

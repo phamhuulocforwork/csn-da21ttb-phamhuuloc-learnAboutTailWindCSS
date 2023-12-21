@@ -8,7 +8,7 @@ export default class extends AbstractView {
   }
 
   async getHtml() {
-    const lessonItemContent = await lessonLearned(2)
+    const lessonItemContent = await lessonLearned()
     return `
       <div
       class="cardContainer sm:gird-cols-1 grid gap-4 bg-white md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4"

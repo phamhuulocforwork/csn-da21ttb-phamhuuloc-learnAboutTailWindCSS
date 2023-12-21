@@ -8,7 +8,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '/',
-    permissions: 'admin',
+    permissions: ['admin', 'public'],
     isActive: false,
   },
   {
@@ -20,7 +20,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '/courses',
-    permissions: 'admin',
+    permissions: ['admin', 'public'],
     isActive: false,
   },
   {
@@ -32,7 +32,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '/my-courses',
-    permissions: ['admin', 'staff', 'student'],
+    permissions: ['student'],
     isActive: false,
   },
   {
@@ -44,7 +44,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '#',
-    permissions: ['admin', 'staff', 'student'],
+    permissions: ['public'],
     isActive: false,
   },
   {
@@ -56,7 +56,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '#',
-    permissions: ['admin', 'staff', 'student'],
+    permissions: ['public'],
     isActive: false,
   },
   {
@@ -68,7 +68,7 @@ const SIDEBAR_LIST = [
       </svg>
     `,
     path: '#',
-    permissions: ['admin', 'staff', 'student'],
+    permissions: ['public'],
     isActive: false,
   },
 ]

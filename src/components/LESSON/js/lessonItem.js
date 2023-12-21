@@ -42,7 +42,7 @@ export default async () => {
               </div>
               <a href="/courses/${data._ID}" data-link>
                 <button
-                  class="btn btn_indigo"
+                  class="btn btn_primary"
                   type="button"
                   data-ripple-light="true"
                 >
