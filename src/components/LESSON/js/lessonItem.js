@@ -37,9 +37,6 @@ export default async () => {
               </p>
             </div>
             <div class="flexBetween p-6 pt-0">
-              <div>
-                <p class="text-xl font-semibold">$ 300</p>
-              </div>
               <a href="/courses/${data._ID}" data-link>
                 <button
                   class="btn btn_primary"

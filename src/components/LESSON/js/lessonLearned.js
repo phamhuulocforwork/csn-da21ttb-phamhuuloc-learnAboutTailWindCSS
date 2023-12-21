@@ -9,8 +9,9 @@ export default async () => {
       (lesson) => lesson.LessonId,
     )
 
-    lessonData.forEach((data) => {
+    lessonData.forEach((data, index) => {
       if (data && studentLessonIds.includes(data._ID)) {
+        console.log(student.LessonsLearned[index].Processing)
         lessonItem += `
           <div
           class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
@@ -36,15 +37,15 @@ export default async () => {
                 ${data.Title}
               </h5>
               <p
-                class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+                class="block font-sans mb-2 text-base font-light leading-relaxed text-inherit antialiased"
               >
                 ${data.Short_description}
               </p>
+              <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                <div class="bg-primary-600 text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${student.LessonsLearned[index].Processing}%"> ${student.LessonsLearned[index].Processing}%</div>
+              </div>
             </div>
             <div class="flexBetween p-6 pt-0">
-              <div>
-                <p class="text-xl font-semibold">$ 300</p>
-              </div>
               <button
                 class="btn btn_primary"
                 type="button"
