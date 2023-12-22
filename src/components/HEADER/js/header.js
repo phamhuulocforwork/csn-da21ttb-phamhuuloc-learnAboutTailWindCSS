@@ -53,7 +53,7 @@ export default async () => {
       </button>
     </form>
     <div id="signInBtn" class="md:flexCenter hidden gap-4">
-      <a href="/sign-in">
+      <a href="/sign-in" data-link>
         <button type="button" class="btn btn_primary">Sign in</button>
       </a>
       <a href="/sign-up" data-link>
