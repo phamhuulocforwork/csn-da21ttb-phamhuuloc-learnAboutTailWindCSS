@@ -14,7 +14,7 @@
   }
 
   strong {
-    @apply text-primary-700 font-semibold;
+    @apply font-semibold text-primary-700;
   }
 
   a {
@@ -38,7 +38,7 @@
   }
 
   .btn_primary {
-    @apply hover:bg-primary-800 bg-primary-700 px-6 py-2 text-white transition-all;
+    @apply bg-primary-700 px-6 py-2 text-white transition-all hover:bg-primary-800;
   }
 
   .flexCenter {

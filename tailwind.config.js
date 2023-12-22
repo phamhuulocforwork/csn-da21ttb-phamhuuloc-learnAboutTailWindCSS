@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'background-pattern': "url('/public/background.svg')",
+        'background-pattern': "url('../../public/background.svg')",
       },
       colors: {
         primary: {
