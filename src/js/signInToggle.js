@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const matchedUser = users.find(
       (user) =>
-        user.Email === userEmailValue && user.Password === passwordValue,
+        user.email === userEmailValue && user.password === passwordValue,
     )
 
     if (matchedUser) {

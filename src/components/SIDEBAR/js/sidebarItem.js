@@ -30,7 +30,7 @@ const displaySidebarItems = async () => {
     let sidebarItem = ''
     const sidebarData = await getAllSidebarItems()
     const user = JSON.parse(localStorage.getItem('user'))
-    const userPermissions = user ? user.Permissions : 'public'
+    const userPermissions = user ? user.permissions : 'public'
 
     sidebarData.forEach((data) => {
       if (
@@ -38,7 +38,7 @@ const displaySidebarItems = async () => {
         data.permissions.includes('public')
       ) {
         sidebarItem += `
-          <a href="${data.path}" class="btn_sidebar capitalize" data-link>
+          <a href="${data.path}" class="btn_sidebar dark:bg-gray-800 capitalize" data-link>
             <div class="flexCenter gap-x-2 py-4">
               ${data.iconSvg}
             </div>

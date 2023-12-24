@@ -9,26 +9,31 @@
     font-family: 'Inter', sans-serif;
   }
 
-  p {
-    @apply text-lg;
-  }
-
-  strong {
-    @apply font-semibold text-primary-700;
-  }
-
-  a {
-    @apply font-semibold text-rose-500;
+  hr {
+    @apply my-6 border dark:border-gray-700;
   }
 }
 
 @layer components {
   .container {
-    @apply mx-auto;
+    @apply mx-auto flex h-full flex-col;
+  }
+
+  .section {
+    @apply my-6;
   }
 }
 
 @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   .btn {
     @apply inline-block rounded-[6px] px-[1em] py-[0.5em] font-semibold tracking-tighter decoration-0 hover:translate-y-[-3px];
   }
@@ -39,6 +44,10 @@
 
   .btn_primary {
     @apply bg-primary-700 px-6 py-2 text-white transition-all hover:bg-primary-800;
+  }
+
+  .btn_rose {
+    @apply bg-rose-700 px-6 py-2 text-white transition-all hover:bg-rose-800;
   }
 
   .flexCenter {

@@ -1,18 +1,18 @@
 const STUDENT = [
   {
-    _ID: 1,
-    User_ID: 2,
-    Student_ID_No: 1002,
-    First_name: 'Jane',
-    Last_name: 'Smith',
-    LessonsLearned: [
+    _id: 1,
+    user_id: 2,
+    student_id_No: 1002,
+    first_name: 'Jane',
+    last_name: 'Smith',
+    lessonsLearned: [
       {
-        LessonId: 1,
-        Processing: 42,
+        lessonId: 1,
+        processing: 42,
       },
       {
-        LessonId: 2,
-        Processing: 54,
+        lessonId: 2,
+        processing: 54,
       },
     ],
   },
@@ -23,7 +23,7 @@ const getAllStudents = () => {
 }
 
 const getStudentByID = (id) => {
-  return STUDENT.find((student) => student._ID === id)
+  return STUDENT.find((student) => student._id === id)
 }
 
 const addStudent = (newStudent) => {
@@ -32,7 +32,7 @@ const addStudent = (newStudent) => {
 }
 
 const updateStudent = (id, updatedStudent) => {
-  const index = STUDENT.findIndex((student) => student._ID === id)
+  const index = STUDENT.findIndex((student) => student._id === id)
   if (index !== -1) {
     STUDENT[index] = { ...STUDENT[index], ...updatedStudent }
     return STUDENT[index]
@@ -41,7 +41,7 @@ const updateStudent = (id, updatedStudent) => {
 }
 
 const deleteStudent = (id) => {
-  const index = STUDENT.findIndex((student) => student._ID === id)
+  const index = STUDENT.findIndex((student) => student._id === id)
   if (index !== -1) {
     const deletedStudent = STUDENT.splice(index, 1)
     return deletedStudent[0]
@@ -50,7 +50,7 @@ const deleteStudent = (id) => {
 }
 
 const getLessonsLearned = (id) => {
-  const student = STUDENT.find((student) => student._ID === id)
+  const student = STUDENT.find((student) => student._id === id)
   return student ? student.LessonsLearned : null
 }
 

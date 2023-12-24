@@ -1,460 +1,326 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./dist/output.css" rel="stylesheet" />
-  </head>
-  <body class="bg-background-pattern">
-    <div class="container bg-white">
-      <div class="container flex">
-        <!-- sidebar -->
-        <div
-          class="sidebar fixed z-30 hidden h-full flex-col border bg-white md:static md:flex md:h-auto"
-        ></div>
-        <div class="inset-y-0 w-full border-b bg-white">
-          <!-- navbar -->
-          <header class="flexBetween z-30 gap-4 bg-white p-4 shadow-sm">
-            <!-- mobile sidebar -->
-            <div class="barButton block cursor-pointer md:hidden">
-              <img src="./assets/icons/bars.svg" class="w-6" />
-            </div>
-            <form class="flex items-center">
-              <label for="simple-search" class="sr-only">Search</label>
-              <div class="relative w-full">
-                <input
-                  type="text"
-                  id="simple-search"
-                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
-                  placeholder="Search branch name..."
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                class="ms-2 rounded-lg border border-indigo-700 bg-indigo-700 p-2.5 text-sm font-medium text-white hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-              >
-                <svg
-                  class="h-4 w-4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-                <span class="sr-only">Search</span>
-              </button>
-            </form>
-            <!-- button -->
-            <div class="md:flexCenter hidden gap-4">
-              <button type="button" class="btn btn_indigo">Sign in</button>
-              <button type="button" class="btn btn_indigo">Sign up</button>
-            </div>
-          </header>
-          <!-- main content -->
-          <main class="main p-6">
-            <div
-              class="categories flex items-center gap-x-2 overflow-x-auto pb-2"
+<div
+  class="section no-scrollbar grid grid-cols-1 gap-4 overflow-auto lg:grid-cols-2"
+>
+  <div class="overflow-hidden rounded-xl">
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/CBWnBi-awSA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="relative">
+    <h1
+      class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 dark:text-white lg:mb-6 lg:text-4xl"
+    >
+      Introduction to JavaScript
+    </h1>
+    <p class="lead">
+      JavaScript is an object-based scripting language which is lightweight and
+      cross-platform. JavaScript is not a compiled language, but it is a
+      translated language. The JavaScript Translator (embedded in the browser)
+      is responsible for translating the JavaScript code for the web browser.
+    </p>
+    <button class="btn btn_rose section absolute right-0 mx-6">
+      Get now &#8594;
+    </button>
+  </div>
+</div>
+<hr />
+<div id="lessonContent" class="section grid grid-cols-4">
+  <div class="col-span-4 overflow-auto border-r-2 lg:col-span-3">
+    <article
+      class="prose md:prose-2xl prose-h2:text-2xl prose-p:text-lg prose-a:text-lg prose-a:font-semibold prose-a:text-rose-600 prose-a:no-underline prose-strong:text-lg prose-strong:text-primary-700 prose-li:text-lg"
+    >
+      <h2 id="1">Purpose</h2>
+      <p>
+        JavaScript enables developers to create dynamic, interactive content on
+        web pages. It allows manipulation of HTML and CSS, responding to user
+        actions, and handling data asynchronously.
+      </p>
+      <h2 id="2">Features</h2>
+      <ol>
+        <li>
+          <strong>High-level Language:</strong> It abstracts complex details and
+          provides a simpler interface for developers.
+        </li>
+        <li>
+          <strong>Interpreted Language:</strong> It doesn't require a separate
+          compilation step and can be executed directly in web browsers.
+        </li>
+        <li>
+          <strong>Dynamic Typing:</strong> Variables can hold different types of
+          data.
+        </li>
+        <li>
+          <strong>Prototype-based Object-Oriented:</strong> It uses prototypes
+          rather than classes for inheritance.
+        </li>
+        <li>
+          <strong>Functional Programming Support:</strong>
+          Functions are treated as first-class citizens and can be passed around
+          as variables.
+        </li>
+        <li>
+          <strong>Event-Driven:</strong> Reacts to events such as clicks, form
+          submissions, and more.
+        </li>
+        <li>
+          <strong>Asynchronous:</strong> Supports asynchronous operations
+          through callbacks, promises, and async/await syntax.
+        </li>
+      </ol>
+      <h2 id="3">Usage</h2>
+      <ul>
+        <li>
+          <strong>Front-End Development:</strong> Manipulating the DOM (Document
+          Object Model), handling events, making asynchronous HTTP requests, and
+          creating interactive user interfaces.
+        </li>
+        <li>
+          <strong>Back-End Development:</strong> Server-side scripting using
+          platforms like Node.js to build web servers and handle requests.
+        </li>
+      </ul>
+      <h2 id="4">Basic Syntax</h2>
+      <pre>
+                      <code>
+// Variables and Data Types
+let greeting = 'Hello, ';
+const name = 'John';
+let age = 25;
+let isMale = true;
+let fruits = ['apple', 'banana', 'orange']; // Array
+let person = { name: 'Alice', age: 30 }; // Object
+
+// Functions
+function greet(personName) {
+return greeting + personName;
+}
+
+// Conditionals
+if (age >= 18) {
+console.log('You are an adult.');
+} else {
+console.log('You are a minor.');
+}
+
+// Loops
+for (let i = 0; i < fruits.length; i++) {
+console.log(fruits[i]);
+}
+
+// Events
+document.getElementById('myButton').addEventListener('click', function() {
+console.log('Button clicked!');
+});
+                      </code>
+                    </pre>
+      <h2 id="5">Resources to Learn</h2>
+      <ul>
+        <li>
+          <strong>MDN Web Docs:</strong> Offers comprehensive documentation and
+          tutorials:
+          <a href="#">MDN JavaScript</a>
+        </li>
+        <li>
+          <strong>Codecademy, freeCodeCamp, and Udemy:</strong>
+          Provide interactive courses for beginners and advanced learners.
+        </li>
+        <li>
+          <strong>Books:</strong> "Eloquent JavaScript" by Marijn Haverbeke and
+          "JavaScript: The Good Parts" by Douglas Crockford are popular choices.
+        </li>
+      </ul>
+    </article>
+  </div>
+  <span
+    id="readBtn"
+    class="cursor-pointer text-lg font-semibold tracking-tighter text-primary-700 underline"
+  ></span>
+
+  <div class="ml-2 hidden p-2 lg:col-span-1 lg:block">
+    <div>
+      <span class="text-md font-semibold uppercase">on this lesson</span>
+      <ul class="space-y-3">
+        <li class="flex border-gray-400 pl-2 text-base hover:border-l-2">
+          <a href="#1" class="text-gray-400">Purpose</a>
+        </li>
+        <li class="flex border-gray-400 pl-2 text-base hover:border-l-2">
+          <a href="#2" class="text-gray-400">Features</a>
+        </li>
+        <li class="flex border-gray-400 pl-2 text-base hover:border-l-2">
+          <a href="#2" class="text-gray-400">Usage</a>
+        </li>
+        <li class="flex border-gray-400 pl-2 text-base hover:border-l-2">
+          <a href="#4" class="text-gray-400">Basic Syntax</a>
+        </li>
+        <li class="flex border-gray-400 pl-2 text-base hover:border-l-2">
+          <a href="#5" class="text-gray-400">Resources to Learn:</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<article class="rounded-lg bg-white p-6 text-base dark:bg-gray-900">
+  <div class="mb-2 flex items-center justify-between">
+    <div class="flex items-center">
+      <p
+        class="mr-3 inline-flex items-center text-sm font-semibold text-gray-900 dark:text-white"
+      >
+        <img
+          class="mr-2 h-6 w-6 rounded-full"
+          src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+          alt="Michael Gough"
+        />Michael Gough
+      </p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        <time>Feb. 8, 2022</time>
+      </p>
+    </div>
+    <button
+      id="dropdownComment1Button"
+      data-dropdown-toggle="dropdownComment1"
+      class="inline-flex items-center rounded-lg bg-white p-2 text-center text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-50 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      type="button"
+    >
+      <svg
+        class="h-4 w-4"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 16 3"
+      >
+        <path
+          d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+        />
+      </svg>
+      <span class="sr-only">Comment settings</span>
+    </button>
+  </div>
+  <p class="text-gray-500 dark:text-gray-400">
+    Very straight-to-point article. Really worth time reading. Thank you! But
+    tools are just the instruments for the UX designers. The knowledge of the
+    design tools are as important as the creation of the design strategy.
+  </p>
+  <div class="mt-4 flex items-center space-x-4">
+    <button
+      type="button"
+      class="flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400"
+    >
+      <svg
+        class="mr-1.5 h-3.5 w-3.5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 20 18"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"
+        />
+      </svg>
+      Reply
+    </button>
+  </div>
+</article>
+
+<div class="section">
+  <form>
+    <div
+      class="mb-4 w-full rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-600 dark:bg-gray-700"
+    >
+      <div class="rounded-t-lg bg-white px-4 py-2 dark:bg-gray-800">
+        <label for="comment" class="sr-only">Your comment</label>
+        <textarea
+          id="comment"
+          rows="2"
+          class="w-full border-0 bg-white px-0 text-sm text-gray-900 focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+          placeholder="Write a comment..."
+          required
+        ></textarea>
+      </div>
+      <div
+        class="flex items-center justify-between border-t px-3 py-2 dark:border-gray-600"
+      >
+        <button
+          type="submit"
+          class="inline-flex items-center rounded-lg bg-primary-700 px-4 py-2.5 text-center text-xs font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900"
+        >
+          Post comment
+        </button>
+        <div class="flex space-x-1 ps-0 rtl:space-x-reverse sm:ps-2">
+          <button
+            type="button"
+            class="inline-flex cursor-pointer items-center justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-4 w-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 12 20"
             >
-              <div
-                class="categoriesItem flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-200 px-3 py-2 text-sm hover:border-indigo-700"
-              >
-                <img class="icon" src="" alt="" />
-                <div class="truncate">Tag somethings</div>
-              </div>
-              <div
-                class="categoriesItem flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-200 px-3 py-2 text-sm hover:border-indigo-700"
-              >
-                <img class="icon" src="" alt="" />
-                <div class="truncate">Tag somethings</div>
-              </div>
-              <div
-                class="categoriesItem flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-200 px-3 py-2 text-sm hover:border-indigo-700"
-              >
-                <img class="icon" src="" alt="" />
-                <div class="truncate">Tag somethings</div>
-              </div>
-            </div>
-            <div
-              class="cardContainer sm:gird-cols-1 grid gap-4 bg-white md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4"
+              <path
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 6v8a5 5 0 1 0 10 0V4.5a3.5 3.5 0 1 0-7 0V13a2 2 0 0 0 4 0V6"
+              />
+            </svg>
+            <span class="sr-only">Attach file</span>
+          </button>
+          <button
+            type="button"
+            class="inline-flex cursor-pointer items-center justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-4 w-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 16 20"
             >
-              <div
-                class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
-              >
-                <div class="m-2 overflow-hidden rounded-md">
-                  <div class="absolute m-2">
-                    <p
-                      class="rounded-md bg-white/30 px-3 py-2 text-base font-semibold tracking-wider text-black backdrop-blur-md"
-                    >
-                      HTML
-                    </p>
-                  </div>
-                  <img
-                    src="https://picsum.photos/350/200"
-                    alt=""
-                    class="w-full"
-                  />
-                </div>
-                <div class="p-4">
-                  <h5
-                    class="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased"
-                  >
-                    Card title
-                  </h5>
-                  <p
-                    class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
-                  >
-                    description
-                  </p>
-                  <div class="flexStart mt-1 w-full">
-                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
-                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
-                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
-                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
-                    <img class="mr-1 w-4" src="./assets/icons/star.svg" />
-                    <span class="ml-2 text-base text-gray-500">(20)</span>
-                  </div>
-                </div>
-                <div class="flexBetween p-6 pt-0">
-                  <div>
-                    <p class="text-xl font-semibold">$ 300</p>
-                  </div>
-                  <button
-                    class="btn btn_indigo"
-                    type="button"
-                    data-ripple-light="true"
-                  >
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </main>
+              <path
+                d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"
+              />
+            </svg>
+            <span class="sr-only">Set location</span>
+          </button>
+          <button
+            type="button"
+            class="inline-flex cursor-pointer items-center justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-4 w-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 18"
+            >
+              <path
+                d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"
+              />
+            </svg>
+            <span class="sr-only">Upload image</span>
+          </button>
         </div>
       </div>
-      <footer
-        class="dark:bg-dark relative z-10 bg-white pb-5 pt-5 lg:pb-20 lg:pt-[120px]"
-      >
-        <div class="container mx-auto">
-          <div class="-mx-4 flex flex-wrap">
-            <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
-              <div class="mb-10 w-full">
-                <a
-                  href="javascript:void(0)"
-                  class="mb-6 inline-block max-w-[160px]"
-                >
-                  <!-- FIXME: LOGO here -->
-                </a>
-                <p class="text-body-color dark:text-dark-6 mb-7 text-base">
-                  Sed ut perspiciatis undmnis is iste natus error sit amet
-                  voluptatem totam rem aperiam.
-                </p>
-                <p
-                  class="text-dark flex items-center text-sm font-medium dark:text-white"
-                >
-                  <span class="text-primary mr-3">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_941_15626)">
-                        <path
-                          d="M15.1875 19.4688C14.3438 19.4688 13.375 19.25 12.3125 18.8438C10.1875 18 7.84377 16.375 5.75002 14.2813C3.65627 12.1875 2.03127 9.84377 1.18752 7.68752C0.250019 5.37502 0.343769 3.46877 1.43752 2.40627C1.46877 2.37502 1.53127 2.34377 1.56252 2.31252L4.18752 0.750025C4.84377 0.375025 5.68752 0.562525 6.12502 1.18752L7.96877 3.93753C8.40627 4.59378 8.21877 5.46877 7.59377 5.90627L6.46877 6.68752C7.28127 8.00002 9.59377 11.2188 13.2813 13.5313L13.9688 12.5313C14.5 11.7813 15.3438 11.5625 16.0313 12.0313L18.7813 13.875C19.4063 14.3125 19.5938 15.1563 19.2188 15.8125L17.6563 18.4375C17.625 18.5 17.5938 18.5313 17.5625 18.5625C17 19.1563 16.1875 19.4688 15.1875 19.4688ZM2.37502 3.46878C1.78127 4.12503 1.81252 5.46877 2.50002 7.18752C3.28127 9.15627 4.78127 11.3125 6.75002 13.2813C8.68752 15.2188 10.875 16.7188 12.8125 17.5C14.5 18.1875 15.8438 18.2188 16.5313 17.625L18.0313 15.0625C18.0313 15.0313 18.0313 15.0313 18.0313 15L15.2813 13.1563C15.2813 13.1563 15.2188 13.1875 15.1563 13.2813L14.4688 14.2813C14.0313 14.9063 13.1875 15.0938 12.5625 14.6875C8.62502 12.25 6.18752 8.84377 5.31252 7.46877C4.90627 6.81252 5.06252 5.96878 5.68752 5.53128L6.81252 4.75002V4.71878L4.96877 1.96877C4.96877 1.93752 4.93752 1.93752 4.90627 1.96877L2.37502 3.46878Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18.3125 8.90633C17.9375 8.90633 17.6563 8.62508 17.625 8.25008C17.375 5.09383 14.7813 2.56258 11.5938 2.34383C11.2188 2.31258 10.9063 2.00008 10.9375 1.59383C10.9688 1.21883 11.2813 0.906333 11.6875 0.937583C15.5625 1.18758 18.7188 4.25008 19.0313 8.12508C19.0625 8.50008 18.7813 8.84383 18.375 8.87508C18.375 8.90633 18.3438 8.90633 18.3125 8.90633Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M15.2187 9.18755C14.875 9.18755 14.5625 8.93755 14.5312 8.56255C14.3437 6.87505 13.0312 5.56255 11.3437 5.3438C10.9687 5.31255 10.6875 4.93755 10.7187 4.56255C10.75 4.18755 11.125 3.9063 11.5 3.93755C13.8437 4.2188 15.6562 6.0313 15.9375 8.37505C15.9687 8.75005 15.7187 9.0938 15.3125 9.1563C15.25 9.18755 15.2187 9.18755 15.2187 9.18755Z"
-                          fill="currentColor"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_941_15626">
-                          <rect width="20" height="20" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </span>
-                  <span>+84 0355443403</span>
-                </p>
-              </div>
-            </div>
-            <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-              <div class="mb-10 w-full">
-                <h4
-                  class="text-dark mb-9 text-lg font-semibold dark:text-white"
-                >
-                  Resources
-                </h4>
-                <ul class="space-y-3">
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      SaaS Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Our Products
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      User Flow
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      User Strategy
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-              <div class="mb-10 w-full">
-                <h4
-                  class="text-dark mb-9 text-lg font-semibold dark:text-white"
-                >
-                  Company
-                </h4>
-                <ul class="space-y-3">
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      About TailGrids
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Contact & Support
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Success History
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Setting & Privacy
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-              <div class="mb-10 w-full">
-                <h4
-                  class="text-dark mb-9 text-lg font-semibold dark:text-white"
-                >
-                  Quick Links
-                </h4>
-                <ul class="space-y-3">
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Premium Support
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Our Services
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Know Our Team
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 inline-block text-base leading-loose"
-                    >
-                      Download App
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
-              <div class="mb-10 w-full">
-                <h4
-                  class="text-dark mb-9 text-lg font-semibold dark:text-white"
-                >
-                  Follow Us On
-                </h4>
-                <div class="mb-6 flex items-center">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border hover:text-white dark:text-white sm:mr-4 lg:mr-3 xl:mr-4"
-                  >
-                    <svg
-                      width="8"
-                      height="16"
-                      viewBox="0 0 8 16"
-                      class="fill-current"
-                    >
-                      <path
-                        d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border hover:text-white dark:text-white sm:mr-4 lg:mr-3 xl:mr-4"
-                  >
-                    <svg
-                      width="16"
-                      height="12"
-                      viewBox="0 0 16 12"
-                      class="fill-current"
-                    >
-                      <path
-                        d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border hover:text-white dark:text-white sm:mr-4 lg:mr-3 xl:mr-4"
-                  >
-                    <svg
-                      width="16"
-                      height="12"
-                      viewBox="0 0 16 12"
-                      class="fill-current"
-                    >
-                      <path
-                        d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border hover:text-white dark:text-white sm:mr-4 lg:mr-3 xl:mr-4"
-                  >
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      class="fill-current"
-                    >
-                      <path
-                        d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <p class="text-body-color dark:text-dark-6 text-base">
-                  &copy; 2024 Tailwind
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <span class="absolute bottom-0 left-0 z-[-1]">
-            <svg
-              width="217"
-              height="229"
-              viewBox="0 0 217 229"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z"
-                fill="url(#paint0_linear_1179_5)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1179_5"
-                  x1="76.5"
-                  y1="281"
-                  x2="76.5"
-                  y2="1.22829e-05"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#3056D3" stop-opacity="0.08" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span class="absolute right-10 top-10 z-[-1]">
-            <svg
-              width="75"
-              height="75"
-              viewBox="0 0 75 75"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z"
-                fill="url(#paint0_linear_1179_4)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1179_4"
-                  x1="-1.63917e-06"
-                  y1="37.5"
-                  x2="75"
-                  y2="37.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#13C296" stop-opacity="0.31" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-        </div>
-      </footer>
     </div>
-    <script src="./src/js/index.js" type="module"></script>
-  </body>
-</html>
+  </form>
+  <p class="ms-auto text-xs text-gray-500 dark:text-gray-400">
+    Remember, contributions to this topic should follow our
+    <a href="#" class="text-primary-600 hover:underline dark:text-primary-500"
+      >Community Guidelines</a
+    >.
+  </p>
+</div>

@@ -22,7 +22,7 @@ export default async () => {
           />
         </svg>
       </div>
-      <div class="p-5 flexCenter">
+      <div class="p-6 flexCenter">
         <a href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default async () => {
           </svg>
         </a>
       </div>
-      <hr class=" text-gray-600" />
+      <hr class="text-gray-600 my-0"/>
       <div class="h-full flex w-56 flex-col z-30">
         <div class="flex flex-col overflow-auto bg-white">
           <div class="flex flex-col w-full">

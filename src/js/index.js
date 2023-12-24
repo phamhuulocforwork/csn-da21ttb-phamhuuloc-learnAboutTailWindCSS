@@ -7,6 +7,7 @@ document.querySelector('#header').innerHTML = headerContent
 
 import Home from './views/Home.js'
 import SignInPopup from './views/SignInPopup.js'
+import LessonDetail from './views/LessonDetail.js'
 import Courses from './views/Courses.js'
 import MyCourses from './views/MyCourses.js'
 
@@ -35,6 +36,7 @@ const router = async () => {
   const routes = [
     { path: '/', querySelector: '#main', view: Home },
     { path: '/sign-in', querySelector: '#root', view: SignInPopup },
+    { path: '/courses/:id', querySelector: '#main', view: LessonDetail },
     { path: '/courses', querySelector: '#main', view: Courses },
     { path: '/my-courses', querySelector: '#main', view: MyCourses },
   ]

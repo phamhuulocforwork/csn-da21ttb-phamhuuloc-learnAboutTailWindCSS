@@ -1,26 +1,22 @@
 const USER = [
   {
-    _ID: 1,
-    Username: 'admin',
-    Password: '123',
-    Email: 'admin@gmail.com',
-    Permissions: 'admin',
-    LessonsLearned: [],
+    _id: 1,
+    username: 'admin',
+    password: '123',
+    email: 'admin@gmail.com',
+    permissions: 'admin',
+    lessonsLearned: [],
   },
   {
-    _ID: 2,
-    Username: 'billpham',
-    Password: '123',
-    Email: 'billpham@gmail.com',
-    Permissions: 'student',
-    LessonsLearned: [
+    _id: 2,
+    username: 'billpham',
+    password: '123',
+    email: 'billpham@gmail.com',
+    permissions: 'student',
+    lessonsLearned: [
       {
-        LessonId: 1,
-        Processing: 42,
-      },
-      {
-        LessonId: 2,
-        Processing: 54,
+        lessonId: 1,
+        processing: 42,
       },
     ],
   },
@@ -31,7 +27,7 @@ const getAllUsers = () => {
 }
 
 const getUserByID = (id) => {
-  return USER.find((user) => user._ID === id)
+  return USER.find((user) => user._id === id)
 }
 
 const addUser = (newUser) => {
@@ -49,7 +45,7 @@ const updateUser = (id, updatedUser) => {
 }
 
 const deleteUser = (id) => {
-  const index = USER.findIndex((user) => user._ID === id)
+  const index = USER.findIndex((user) => user._id === id)
   if (index !== -1) {
     const deletedUser = USER.splice(index, 1)
     return deletedUser[0]
@@ -58,8 +54,8 @@ const deleteUser = (id) => {
 }
 
 const getCurrentUserPermissions = (username) => {
-  const user = USER.find((user) => user.Username === username)
-  return user ? user.Permissions : null
+  const user = USER.find((user) => user.username === username)
+  return user ? user.permissions : null
 }
 
 export {

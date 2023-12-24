@@ -5,13 +5,13 @@ export default async () => {
     let lessonItem = ''
     const lessonData = await getAllLessons()
     const student = JSON.parse(localStorage.getItem('user'))
-    const studentLessonIds = student.LessonsLearned.map(
-      (lesson) => lesson.LessonId,
+    const studentLessonIds = student.lessonsLearned.map(
+      (lesson) => lesson.lessonId,
     )
 
     lessonData.forEach((data, index) => {
-      if (data && studentLessonIds.includes(data._ID)) {
-        console.log(student.LessonsLearned[index].Processing)
+      if (data && studentLessonIds.includes(data._id)) {
+        console.log(student.lessonsLearned[index].processing)
         lessonItem += `
           <div
           class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
@@ -21,11 +21,11 @@ export default async () => {
                 <p
                   class="rounded-md bg-white/30 px-3 py-2 text-md font-semibold tracking-wider text-black backdrop-blur-md"
                 >
-                  ${data.Tag}
+                  ${data.tag}
                 </p>
               </div>
               <img
-                src="${data.Image.url}"
+                src="${data.image.url}"
                 alt=""
                 class="w-full"
               />
@@ -34,15 +34,15 @@ export default async () => {
               <h5
                 class="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased"
               >
-                ${data.Title}
+                ${data.title}
               </h5>
               <p
                 class="block font-sans mb-2 text-base font-light leading-relaxed text-inherit antialiased"
               >
-                ${data.Short_description}
+                ${data.short_description}
               </p>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="bg-primary-600 text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${student.LessonsLearned[index].Processing}%"> ${student.LessonsLearned[index].Processing}%</div>
+                <div class="bg-primary-600 text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${student.lessonsLearned[index].processing}%"> ${student.lessonsLearned[index].processing}%</div>
               </div>
             </div>
             <div class="flexBetween p-6 pt-0">

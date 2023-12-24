@@ -11,7 +11,7 @@ export default class extends AbstractView {
     const lessonItemContent = await lessonItem()
     return `
       <div
-      class="cardContainer sm:gird-cols-1 grid gap-4 bg-white md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4"
+      class="cardContainer sm:gird-cols-1 grid gap-4 bg-white dark:bg-gray-800 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4"
       >
         ${lessonItemContent}
       </div>
