@@ -39,7 +39,7 @@
   }
 
   .btn_sidebar {
-    @apply flex cursor-pointer items-center gap-x-2 pl-6 text-sm font-semibold text-slate-500 transition-all hover:bg-slate-300/20 hover:text-slate-600;
+    @apply flex cursor-pointer items-center gap-x-2 pl-6 text-sm font-semibold text-slate-500 hover:bg-slate-300/20 hover:text-slate-600;
   }
 
   .btn_primary {

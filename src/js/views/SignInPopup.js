@@ -10,27 +10,11 @@ export default class extends AbstractView {
       <div class="bg-white/30 backdrop-blur-sm dark:bg-gray-900/10">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="/" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="54"
-              height="41"
-              fill="none"
-              viewBox="0 0 54 41"
-            >
-              <path fill="#2A2E4E" d="M54 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path>
-              <path
-                fill="#2A2E4E"
-                fill-rule="evenodd"
-                d="M13.75 40.794C6.156 40.794 0 34.638 0 27.044V1h5v26.044a8.75 8.75 0 0 0 8.75 8.75c4.893 0 8.75-3.771 8.75-8.544h5v7.5a1.25 1.25 0 0 0 2.5 0v-8.875a6.25 6.25 0 0 1-7.5-6.125V7.25a6.25 6.25 0 1 1 12.5 0v27.5a1.25 1.25 0 1 0 2.5 0V7.25a6.25 6.25 0 1 1 12.5 0v27.5a6.25 6.25 0 0 1-10 5A6.222 6.222 0 0 1 36.25 41a6.222 6.222 0 0 1-3.75-1.25 6.251 6.251 0 0 1-9.466-2.47c-2.456 2.197-5.723 3.514-9.284 3.514Zm30-4.794c-.69 0-1.25-.56-1.25-1.25V7.25a1.25 1.25 0 1 1 2.5 0v27.5c0 .69-.56 1.25-1.25 1.25ZM30 19.75a1.25 1.25 0 0 1-2.5 0V7.25a1.25 1.25 0 1 1 2.5 0v12.5Z"
-                clip-rule="evenodd"
-              ></path>
-              <path
-                fill="#2A2E4E"
-                fill-rule="evenodd"
-                d="M7.5 27.25a6.25 6.25 0 1 0 12.5 0v-20a6.25 6.25 0 1 0-12.5 0v20Zm6.25 1.25c-.69 0-1.25-.56-1.25-1.25v-20a1.25 1.25 0 1 1 2.5 0v20c0 .69-.56 1.25-1.25 1.25Z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>  
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100" height="61.8" viewBox="0 0 50 30.9" >
+                <path class="fill-[#181818] dark:fill-slate-50" d="m13.01,5.54l2.29,3.62-10.77,6.29,10.77,6.17-2.37,3.73L0,17.32v-3.72L13.01,5.54Z"/>
+                <path class="fill-[#181818] dark:fill-slate-50" d="m37.02,5.54l12.98,8.03v3.75l-12.93,8.03-2.37-3.57,10.79-6.34-10.79-6.14,2.32-3.77Z"/>
+                <polygon class="fill-[#fcb017]" points="32.44 6.54 28.67 0 22.13 3.77 24.96 8.68 17.56 25.99 20.39 30.9 25.29 28.07 27.54 9.37 32.44 6.54"/>
+              </svg>
             </a>
             <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
