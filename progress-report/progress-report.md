@@ -25,10 +25,11 @@
 
 ## Tuần 4: Từ 18/12/2023 đến 24/12/2023
 
-- Tạo trang chi tiết cho từng khóa học, hiển thị thông tin chi tiết và tùy chọn tham gia khóa học.
-- Chạy demo.
-- Viết báo cáo.
-- Báo cáo tiến độ với GVHD.
+- Tạo trang chi tiết cho từng khóa học, hiển thị thông tin chi tiết và tùy chọn tham gia khóa học. `Hoàn thành ✅`
+- Chạy demo. `Hoàn thành ✅`
+- Viết báo cáo. `Hoàn thành ✅`
+- Khó khăn và vướng mắc: không.
+- Báo cáo tiến độ với GVHD. 
 
 ## Kết Thúc: Từ 25/12/2023 đến 31/12/2023
 
