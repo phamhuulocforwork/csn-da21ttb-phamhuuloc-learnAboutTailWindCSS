@@ -5,7 +5,6 @@ import { getLessonDetailByID } from '../api/lessonDetail.js'
 export default class extends AbstractView {
   constructor(params) {
     super(params)
-    this.setTitle('Lesson by id')
   }
 
   async getHtml() {
@@ -17,6 +16,7 @@ export default class extends AbstractView {
     const id = Number(this.params.id)
     const lesson = getLessonByID(id)
     const lessonsDetail = getLessonDetailByID(id)
+    this.setTitle(lesson.title)
 
     if (lessonsDetail && !studentLessonIds.includes(id)) {
       return `
@@ -161,7 +161,7 @@ export default class extends AbstractView {
               `
           } else if (lesson.lessonId === id && lesson.processing === 100) {
             lessonDetailContent += `
-              <div class="mb-4 mt-4 text-lg font-bold dark:text-white uppercase">Congratulations on completing this course!</div>
+              <div class="mb-4 mt-4 text-lg font-bold dark:text-white uppercase"><span class="text-yellow-500">Congratulations!!</span> you have completed this course</div>
               <a href="/certificate/${id}">
                 <button class="btn btn_rose mx-4">
                   See certificate &#8594;
@@ -218,7 +218,7 @@ export default class extends AbstractView {
                 >
                   <button
                     type="submit"
-                    class="inline-flex items-center rounded-lg bg-primary-700 px-4 py-2.5 text-center text-xs font-bold text-slate-500 hover:bg-primary-800 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 dark:text-slate-50"
+                    class="inline-flex items-center rounded-lg bg-primary-700 px-4 py-2.5 text-center text-xs font-bold text-slate-50 hover:bg-primary-800 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 dark:text-slate-50"
                   >
                     Post comment
                   </button>
