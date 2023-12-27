@@ -47,11 +47,12 @@ moonIcon.addEventListener('click', () => {
 //=========================================================================
 import Home from './views/Home.js'
 import SignInPopup from './views/SignInPopup.js'
-import LessonDetail from './views/LessonDetail.js'
+import LessonDetail from './views/CoursesDetail.js'
 import Courses from './views/Courses.js'
 import MyCourses from './views/MyCourses.js'
 import Dashboard from './views/Dashboard.js'
 import CrashPage from './views/CrashPage.js'
+import Certificate from './views/Certificate.js'
 
 const pathToRegex = (path) =>
   new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$')
@@ -83,6 +84,7 @@ const router = async () => {
     { path: '/courses/:id', querySelector: '#main', view: LessonDetail },
     { path: '/courses', querySelector: '#main', view: Courses },
     { path: '/my-courses', querySelector: '#main', view: MyCourses },
+    { path: '/certificate/:id', querySelector: '#root', view: Certificate },
   ]
 
   const potentialMatches = routes.map((route) => {
@@ -122,11 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const storedUser = JSON.parse(localStorage.getItem('user'))
   if (storedUser) {
     const signInBtn = document.querySelectorAll('.signInBtn')
-    const signOutBtn = document.querySelector('.signOutBtn')
+    const signOutBtn = document.querySelectorAll('.signOutBtn')
     signInBtn.forEach((element) => {
-      element.classList.remove('md:block')
+      element.classList.toggle('hidden')
     })
-    signOutBtn.classList.add('md:block')
+    signOutBtn.forEach((element) => {
+      element.classList.toggle('hidden')
+    })
   }
   router()
 })

@@ -9,7 +9,7 @@
   </head>
   <body class="bg-background-pattern bg-repeat dark:bg-background-pattern-dark">
     <div id="root">
-      <div class="container bg-white dark:bg-gray-800">
+      <div class="container min-h-screen bg-white dark:bg-gray-800">
         <div class="flex">
           <!-- sidebar -->
           <div
@@ -20,7 +20,7 @@
             <!-- header -->
             <header
               id="header"
-              class="flexBetween z-30 gap-4 bg-white p-6 shadow-sm dark:bg-gray-800"
+              class="z-30 flex gap-4 bg-white p-6 shadow-sm dark:bg-gray-800"
             ></header>
 
             <!-- main section -->
@@ -245,7 +245,6 @@
               </div>
             </div>
           </div>
-
           <!--Copyright section-->
           <div class="bg-neutral-200 p-6 text-center dark:bg-gray-800">
             <span>© 2023 Copyright:</span>
@@ -256,9 +255,48 @@
             >
           </div>
         </footer>
+        <div
+          id="topBtn"
+          class="fixed bottom-2 right-2 z-[99] hidden cursor-pointer rounded-lg bg-primary-600 p-2 text-slate-50 md:bottom-4 md:right-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-10 w-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 15.75 7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <script>
+      const topBtn = document.getElementById('topBtn')
+
+      topBtn.addEventListener('click', () => {
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+      })
+
+      window.onscroll = () => scroll()
+
+      const scroll = () => {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          topBtn.classList.add('md:block')
+        } else {
+          topBtn.classList.remove('md:block')
+        }
+      }
+
       const sidebarToggle = () => {
         const sidebar = document.querySelector('#sidebar')
         if (!sidebar.classList.contains('hidden')) {
@@ -271,7 +309,6 @@
         localStorage.removeItem('user')
       }
     </script>
-
     <script type="module" src="/src/js/index.js"></script>
     <script type="module" src="/src/js/signInToggle.js"></script>
     <script type="module" src="/src/js/chartdata.js"></script>

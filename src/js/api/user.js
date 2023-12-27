@@ -2,6 +2,7 @@ const USER = [
   {
     _id: 1,
     username: 'admin',
+    name: 'admin',
     password: '123',
     email: 'admin@gmail.com',
     permissions: 'admin',
@@ -10,13 +11,34 @@ const USER = [
   {
     _id: 2,
     username: 'billpham',
+    name: 'Pham Huu Loc',
     password: '123',
     email: 'billpham@gmail.com',
     permissions: 'student',
     lessonsLearned: [
       {
         lessonId: 1,
-        processing: 42,
+        processing: 33,
+      },
+      {
+        lessonId: 2,
+        processing: 100,
+      },
+      {
+        lessonId: 3,
+        processing: 74,
+      },
+      {
+        lessonId: 4,
+        processing: 50,
+      },
+      {
+        lessonId: 5,
+        processing: 44,
+      },
+      {
+        lessonId: 6,
+        processing: 47,
       },
     ],
   },
