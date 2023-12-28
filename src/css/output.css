@@ -1472,10 +1472,6 @@ hr {
   max-width: 24rem;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1551,10 +1547,6 @@ hr {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -1701,11 +1693,6 @@ hr {
 .border-primary-700 {
   --tw-border-opacity: 1;
   border-color: rgb(45 96 200 / var(--tw-border-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-blue-700 {
@@ -1958,12 +1945,12 @@ hr {
   padding-left: 0.5rem;
 }
 
-.ps-0 {
-  padding-inline-start: 0px;
+.pr-1 {
+  padding-right: 0.25rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
+.ps-0 {
+  padding-inline-start: 0px;
 }
 
 .pt-4 {
@@ -2080,10 +2067,6 @@ hr {
   line-height: 1;
 }
 
-.leading-relaxed {
-  line-height: 1.625;
-}
-
 .leading-snug {
   line-height: 1.375;
 }
@@ -2162,10 +2145,6 @@ hr {
 .text-indigo-600 {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity));
-}
-
-.text-inherit {
-  color: inherit;
 }
 
 .text-neutral-600 {
@@ -3304,10 +3283,6 @@ hr {
 @media (min-width: 1280px) {
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:p-0 {

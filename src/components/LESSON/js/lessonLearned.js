@@ -11,6 +11,15 @@ export default async () => {
 
     lessonData.forEach((data, index) => {
       if (data && studentLessonIds.includes(data._id)) {
+        let color = ''
+        if (student.lessonsLearned[index].processing < 50) {
+          color = '#ef4444'
+        } else if (student.lessonsLearned[index].processing < 100) {
+          color = '#eab308'
+        } else {
+          color = '#16a34a'
+        }
+
         lessonItem += `
           <div
           class="relative flex flex-col rounded-xl bg-white dark:bg-gray-700 bg-clip-border text-gray-700 dark:text-slate-200 shadow-md"
@@ -36,7 +45,7 @@ export default async () => {
                 ${data.title}
               </h5>
               <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="bg-primary-600 text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${student.lessonsLearned[index].processing}%"> ${student.lessonsLearned[index].processing}%</div>
+                <div class="text-xs font-bold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${student.lessonsLearned[index].processing}%; background-color:${color}"> ${student.lessonsLearned[index].processing}%</div>
               </div>
             </div>
             <div class="flexBetween p-4 pt-4">

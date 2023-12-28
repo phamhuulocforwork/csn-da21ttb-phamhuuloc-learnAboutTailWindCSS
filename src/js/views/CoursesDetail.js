@@ -20,6 +20,18 @@ export default class extends AbstractView {
 
     if (lessonsDetail && !studentLessonIds.includes(id)) {
       return `
+        <div>
+          <button
+            type="button"
+            class="flex items-center text-md text-gray-500 hover:underline font-semibold dark:text-slate-500"
+            onclick="window.history.back()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 pr-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            Go back
+          </button>
+        </div>
         <div
           class="section no-scrollbar grid grid-cols-1 gap-4 overflow-auto lg:grid-cols-2"
         >
@@ -127,6 +139,18 @@ export default class extends AbstractView {
       let lessonDetailContent = ''
       if (lessonsDetail) {
         lessonDetailContent += `
+          <div>
+            <button
+              type="button"
+              class="flex items-center text-md text-gray-500 hover:underline font-semibold dark:text-slate-500"
+              onclick="window.history.back()"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 pr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              Go back
+            </button>
+          </div>
           <div
             class="section no-scrollbar grid grid-cols-1 gap-4 overflow-auto lg:grid-cols-2"
           >
@@ -151,12 +175,20 @@ export default class extends AbstractView {
                 ${lessonsDetail.lead}
               </p>
               `
+        let color = ''
         student.lessonsLearned.map((lesson) => {
           if (lesson.lessonId === id && lesson.processing < 100) {
+            if (lesson.processing < 50) {
+              color = '#ef4444'
+            } else if (lesson.processing < 100) {
+              color = '#eab308'
+            } else {
+              color = '#16a34a'
+            }
             lessonDetailContent += `
                 <div class="mb-2 mt-4 text-lg font-medium dark:text-white capitalize">learning progress</div>
                 <div class="h-6 w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                  <div class="h-6 bg-blue-600 text-lg font-semibold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${lesson.processing}%"> ${lesson.processing}%</div>
+                  <div class="h-6 text-lg font-semibold text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: ${lesson.processing}%; background-color: ${color}"> ${lesson.processing}%</div>
                 </div>
               `
           } else if (lesson.lessonId === id && lesson.processing === 100) {

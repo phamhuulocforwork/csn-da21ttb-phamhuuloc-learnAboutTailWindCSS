@@ -1,5 +1,5 @@
 import AbstractView from './AbstractView.js'
-import lessonItem from '../../components/LESSON/js/CoursesItem.js'
+import lessonItem from '../../components/LESSON/js/lessonItem.js'
 
 export default class extends AbstractView {
   constructor(params) {
