@@ -49,6 +49,7 @@ import Home from './views/Home.js'
 import SignInPopup from './views/SignInPopup.js'
 import LessonDetail from './views/CoursesDetail.js'
 import Courses from './views/Courses.js'
+import CoursesByTag from './views/CoursesByTag.js'
 import MyCourses from './views/MyCourses.js'
 import Dashboard from './views/Dashboard.js'
 import CrashPage from './views/CrashPage.js'
@@ -82,7 +83,7 @@ const router = async () => {
     { path: '/dashboard', querySelector: '#main', view: Dashboard },
     { path: '/sign-in', querySelector: '#root', view: SignInPopup },
     { path: '/courses/:id', querySelector: '#main', view: LessonDetail },
-    { path: '/tag/:tag', querySelector: '#main', view: Courses },
+    { path: '/tag/:tag', querySelector: '#main', view: CoursesByTag },
     { path: '/courses', querySelector: '#main', view: Courses },
     { path: '/my-courses', querySelector: '#main', view: MyCourses },
     { path: '/certificate/:id', querySelector: '#root', view: Certificate },

@@ -2,7 +2,7 @@ const LESSONS = [
   {
     _id: 1,
     title: 'Introduction to JavaScript',
-    tag: 'JavaScript',
+    tag: 'javascript',
     image: {
       _id: 0,
       width: 350,
@@ -122,7 +122,7 @@ const LESSONS = [
   {
     _id: 11,
     title: 'Learn JavaScript',
-    tag: 'JavaScript',
+    tag: 'javascript',
     image: {
       _id: 0,
       width: 350,

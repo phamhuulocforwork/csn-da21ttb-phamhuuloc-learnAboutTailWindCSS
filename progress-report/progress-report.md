@@ -29,7 +29,7 @@
 - Chạy demo. `Hoàn thành ✅`
 - Viết báo cáo. `Hoàn thành ✅`
 - Khó khăn và vướng mắc: không.
-- Báo cáo tiến độ với GVHD. 
+- Báo cáo tiến độ với GVHD.
 
 ## Kết Thúc: Từ 25/12/2023 đến 31/12/2023
 

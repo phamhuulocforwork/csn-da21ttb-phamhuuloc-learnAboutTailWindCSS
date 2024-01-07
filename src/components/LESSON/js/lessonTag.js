@@ -1,8 +1,8 @@
-import { getAllLessons } from '../../../js/api/lesson.js'
+import { getLessonsByTag } from '../../../js/api/lesson.js'
 
 export default async (tagName) => {
   let lessonItem = ''
-  const lessonData = getAllLessons()
+  const lessonData = getLessonsByTag(tagName)
   const student = JSON.parse(localStorage.getItem('user'))
   const studentLessonIds = student
     ? student.lessonsLearned.map((lesson) => lesson.lessonId)
