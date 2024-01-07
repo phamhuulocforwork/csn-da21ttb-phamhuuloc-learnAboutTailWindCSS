@@ -1,8 +1,11 @@
-import { getAllLessons } from '../../../js/api/lesson.js'
+import { getAllLessons, getLessonsByTag } from '../../../js/api/lesson.js'
 
-export default async () => {
+export default async (tagName) => {
   let lessonItem = ''
-  const lessonData = await getAllLessons()
+  const tag = tagName
+  // console.log(tag)
+  // const lessonData = tagName ? getLessonsByTag(tagName) : getAllLessons()
+  const lessonData = tag ? console.log('asdsa') : []
   const student = JSON.parse(localStorage.getItem('user'))
   const studentLessonIds = student
     ? student.lessonsLearned.map((lesson) => lesson.lessonId)

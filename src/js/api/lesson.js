@@ -177,6 +177,12 @@ const getLessonByID = (id) => {
   return LESSONS.find((lesson) => lesson._id === id)
 }
 
+const getLessonsByTag = (tag) => {
+  return LESSONS.filter(
+    (lesson) => lesson.tag.toLowerCase() === tag.toLowerCase(),
+  )
+}
+
 const addLesson = (newLesson) => {
   LESSONS.push(newLesson)
   return newLesson
@@ -200,4 +206,11 @@ const deleteLesson = (id) => {
   return null
 }
 
-export { getAllLessons, getLessonByID, addLesson, updateLesson, deleteLesson }
+export {
+  getAllLessons,
+  getLessonByID,
+  getLessonsByTag,
+  addLesson,
+  updateLesson,
+  deleteLesson,
+}

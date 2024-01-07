@@ -82,6 +82,7 @@ const router = async () => {
     { path: '/dashboard', querySelector: '#main', view: Dashboard },
     { path: '/sign-in', querySelector: '#root', view: SignInPopup },
     { path: '/courses/:id', querySelector: '#main', view: LessonDetail },
+    { path: '/tag/:tag', querySelector: '#main', view: Courses },
     { path: '/courses', querySelector: '#main', view: Courses },
     { path: '/my-courses', querySelector: '#main', view: MyCourses },
     { path: '/certificate/:id', querySelector: '#root', view: Certificate },
