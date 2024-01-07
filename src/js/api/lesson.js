@@ -14,7 +14,7 @@ const LESSONS = [
   {
     _id: 2,
     title: 'Harvard CS50',
-    tag: 'Harvard',
+    tag: 'harvard',
     image: {
       _id: 0,
       width: 350,
@@ -26,7 +26,7 @@ const LESSONS = [
   {
     _id: 3,
     title: 'Learn Python',
-    tag: 'Python',
+    tag: 'python',
     image: {
       _id: 0,
       width: 350,
@@ -38,7 +38,7 @@ const LESSONS = [
   {
     _id: 4,
     title: 'Data Science Journey',
-    tag: 'Data Science',
+    tag: 'data-science',
     image: {
       _id: 0,
       width: 350,
@@ -50,7 +50,7 @@ const LESSONS = [
   {
     _id: 5,
     title: 'AutoCAD for Beginners',
-    tag: 'AutoCAD',
+    tag: 'autocad',
     image: {
       _id: 0,
       width: 350,
@@ -62,7 +62,7 @@ const LESSONS = [
   {
     _id: 6,
     title: 'Mastering CSS',
-    tag: 'CSS',
+    tag: 'css',
     image: {
       _id: 0,
       width: 350,
@@ -74,7 +74,7 @@ const LESSONS = [
   {
     _id: 7,
     title: 'Introduction to Linux',
-    tag: 'Linux',
+    tag: 'linux',
     image: {
       _id: 0,
       width: 350,
@@ -86,7 +86,7 @@ const LESSONS = [
   {
     _id: 8,
     title: 'Machine Learning',
-    tag: 'Machine Learning',
+    tag: 'machine-learning',
     image: {
       _id: 0,
       width: 350,
@@ -98,7 +98,7 @@ const LESSONS = [
   {
     _id: 9,
     title: 'HTML Full Course',
-    tag: 'HTML',
+    tag: 'html',
     image: {
       _id: 0,
       width: 350,
@@ -134,7 +134,7 @@ const LESSONS = [
   {
     _id: 12,
     title: 'Algorithms & Data Structures',
-    tag: 'Algorithms',
+    tag: 'algorithms',
     image: {
       _id: 0,
       width: 350,
@@ -146,7 +146,7 @@ const LESSONS = [
   {
     _id: 13,
     title: 'C++ Tutorial',
-    tag: 'C++',
+    tag: 'c++',
     image: {
       _id: 0,
       width: 350,
@@ -158,7 +158,7 @@ const LESSONS = [
   {
     _id: 14,
     title: 'C# Tutorial',
-    tag: 'C#',
+    tag: 'c#',
     image: {
       _id: 0,
       width: 350,
